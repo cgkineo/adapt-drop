@@ -22,8 +22,8 @@ A dropdown extension to expand and shrink elements.
 	</tr>
 	<tr>
 		<td><code>_isEnabled</code></td>
-		<td>String</td>
-		<td>Adds a dropdown button to expand and shrink the element</td>
+		<td>Boolean</td>
+		<td>Add a dropdown button to expand and shrink the element</td>
 		<td><code>false</code></td>
 	</tr>
 	<tr>

@@ -2,6 +2,8 @@ define([ "core/js/adapt" ], function(Adapt) {
 
 	var DropView = Backbone.View.extend({
 
+		$content: null,
+
 		className: function() {
 			var classes = "drop";
 			var modelClasses = this.model.get("_drop")._classes;
@@ -10,8 +12,6 @@ define([ "core/js/adapt" ], function(Adapt) {
 
 			return classes;
 		},
-
-		$content: null,
 
 		initialize: function(options) {
 			this.$content = options.$content;
