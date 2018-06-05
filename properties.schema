@@ -1,0 +1,202 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "id": "http://jsonschema.net",
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "properties": {
+        "course": {
+          "type": "object",
+          "properties": {
+            "_drop": {
+              "type": "object",
+              "legend": "Drop",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox",
+                  "help": "Add a dropdown button to expand and shrink the element"
+                },
+                "_classes": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Classes",
+                  "inputType": "Text",
+                  "help": "Custom classes to add to the container"
+                },
+                "title": {
+                  "type": "string",
+                  "default": "",
+                  "inputType": "Text",
+                  "help": "Button text"
+                },
+                "ariaLabel": {
+                  "type": "string",
+                  "default": "",
+                  "title": "ARIA label",
+                  "inputType": "Text",
+                  "help": "Button label for assistive technologies"
+                }
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type": "object",
+          "properties": {
+            "_drop": {
+              "type": "object",
+              "legend": "Drop",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox",
+                  "help": "Add a dropdown button to expand and shrink the element"
+                },
+                "_classes": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Classes",
+                  "inputType": "Text",
+                  "help": "Custom classes to add to the container"
+                },
+                "title": {
+                  "type": "string",
+                  "default": "",
+                  "inputType": "Text",
+                  "help": "Button text"
+                },
+                "ariaLabel": {
+                  "type": "string",
+                  "default": "",
+                  "title": "ARIA label",
+                  "inputType": "Text",
+                  "help": "Button label for assistive technologies"
+                }
+              }
+            }
+          }
+        },
+        "article": {
+          "type": "object",
+          "properties": {
+            "_drop": {
+              "type": "object",
+              "legend": "Drop",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox",
+                  "help": "Add a dropdown button to expand and shrink the element"
+                },
+                "_classes": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Classes",
+                  "inputType": "Text",
+                  "help": "Custom classes to add to the container"
+                },
+                "title": {
+                  "type": "string",
+                  "default": "",
+                  "inputType": "Text",
+                  "help": "Button text"
+                },
+                "ariaLabel": {
+                  "type": "string",
+                  "default": "",
+                  "title": "ARIA label",
+                  "inputType": "Text",
+                  "help": "Button label for assistive technologies"
+                }
+              }
+            }
+          }
+        },
+        "block": {
+          "type": "object",
+          "properties": {
+            "_drop": {
+              "type": "object",
+              "legend": "Drop",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox",
+                  "help": "Add a dropdown button to expand and shrink the element"
+                },
+                "_classes": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Classes",
+                  "inputType": "Text",
+                  "help": "Custom classes to add to the container"
+                },
+                "title": {
+                  "type": "string",
+                  "default": "",
+                  "inputType": "Text",
+                  "help": "Button text"
+                },
+                "ariaLabel": {
+                  "type": "string",
+                  "default": "",
+                  "title": "ARIA label",
+                  "inputType": "Text",
+                  "help": "Button label for assistive technologies"
+                }
+              }
+            }
+          }
+        },
+        "component": {
+          "type": "object",
+          "properties": {
+            "_drop": {
+              "type": "object",
+              "legend": "Drop",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "Is enabled",
+                  "inputType": "Checkbox",
+                  "help": "Add a dropdown button to expand and shrink the element"
+                },
+                "_classes": {
+                  "type": "string",
+                  "default": "",
+                  "title": "Classes",
+                  "inputType": "Text",
+                  "help": "Custom classes to add to the container"
+                },
+                "title": {
+                  "type": "string",
+                  "default": "",
+                  "inputType": "Text",
+                  "help": "Button text"
+                },
+                "ariaLabel": {
+                  "type": "string",
+                  "default": "",
+                  "title": "ARIA label",
+                  "inputType": "Text",
+                  "help": "Button label for assistive technologies"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

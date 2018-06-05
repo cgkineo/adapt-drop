@@ -1,0 +1,50 @@
+@non-mobile: ~"html:not(.os-ios):not(.os-android)";
+
+.drop {
+	margin-bottom: @item-margin-bottom;
+}
+
+.drop-button {
+	position: relative;
+	width: 100%;
+	padding: @item-padding;
+	background-color: @item-color;
+	color: @item-text-color;
+	@{non-mobile} &:hover {
+		background-color: @item-color-hover;
+		color: @item-text-color-hover;
+	}
+	.visited > & {
+		background-color: @item-color-visited;
+		color: @item-text-color-visited;
+	}
+	.icon {
+		position: absolute;
+		top: 50%;
+		color: @item-text-color;
+		transform: translateY(-50%);
+	}
+	.dropped > & .icon-plus,
+	:not(.dropped) > & .icon-minus {
+		display: none;
+	}
+}
+
+.drop-title {
+	.item-title;
+}
+
+@media (min-width: (@device-width-medium + 1)) {
+	.component-left .drop {
+		margin-right: 5%;
+		.drop-inner {
+			margin-right: 0;
+		}
+	}
+	.component-right .drop {
+		margin-left: 5%;
+		.drop-inner {
+			margin-left: 0;
+		}
+	}
+}
