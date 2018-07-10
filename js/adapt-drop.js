@@ -47,9 +47,8 @@ define([ "core/js/adapt" ], function(Adapt) {
 		toggle: function() {
 			var shouldOpen = !this.$el.hasClass("dropped");
 
-			this.$el
-				.toggleClass("dropped", shouldOpen)
-				.children(".drop-button").attr("aria-expanded", shouldOpen);
+			this.$el.toggleClass("dropped", shouldOpen);
+			this.$(".drop-button").first().attr("aria-expanded", shouldOpen);
 
 			this.$content.stop().slideToggle({
 				start: (shouldOpen ? this.onOpen : this.onClose).bind(this),
