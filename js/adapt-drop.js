@@ -19,7 +19,7 @@ define([ "core/js/adapt" ], function(Adapt) {
     },
 
     events: {
-      "click .drop-button": "onClick"
+      "click .js-toggle-view": "onClick"
     },
 
     render: function() {
@@ -27,12 +27,12 @@ define([ "core/js/adapt" ], function(Adapt) {
       var data = this.model.get("_drop");
 
       this.$el.html(template(data)).appendTo(this.$content.parent());
-      this.$content.addClass("drop-content").appendTo(this.$el).hide();
+      this.$content.addClass("drop__content").appendTo(this.$el).hide();
       this.setChildrenVisibility(false);
     },
 
     onClick: function() {
-      this.$el.addClass("visited");
+      this.$el.addClass("is-visited");
       this.toggle();
 
       return false;
@@ -45,10 +45,10 @@ define([ "core/js/adapt" ], function(Adapt) {
     },
 
     toggle: function() {
-      var shouldOpen = !this.$el.hasClass("dropped");
+      var shouldOpen = !this.$el.hasClass("is-open");
 
-      this.$el.toggleClass("dropped", shouldOpen);
-      this.$(".drop-button").first().attr("aria-expanded", shouldOpen);
+      this.$el.toggleClass("is-open", shouldOpen);
+      this.$(".drop__btn").first().attr("aria-expanded", shouldOpen);
 
       this.$content.stop().slideToggle({
         start: (shouldOpen ? this.onOpen : this.onClose).bind(this),
