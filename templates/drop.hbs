@@ -1,12 +1,14 @@
 <button class="drop__btn js-toggle-view" aria-expanded="false"{{#if ariaLabel}} aria-label="{{ariaLabel}}"{{/if}}>
-  <div class="drop__btn-icon">
-    <div class="icon"></div>
-  </div>
-  {{#if title}}
-  <div class="drop__btn-title">
-    <div class="drop__btn-title-inner">
-      {{{title}}}
+  <div class="drop__btn-inner">
+    <div class="drop__btn-icon">
+      <div class="icon"></div>
     </div>
+    {{#if title}}
+    <div class="drop__btn-title">
+      <div class="drop__btn-title-inner">
+        {{{title}}}
+      </div>
+    </div>
+    {{/if}}
   </div>
-  {{/if}}
 </button>
