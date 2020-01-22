@@ -28,7 +28,7 @@ define([ "core/js/adapt" ], function(Adapt) {
 
       this.$el.html(template(data)).appendTo(this.$content.parent());
       this.$content.addClass("drop__content").appendTo(this.$el).hide();
-      this.setChildrenVisibility(false);
+      this.setAvailability(false);
     },
 
     onClick: function() {
@@ -38,10 +38,8 @@ define([ "core/js/adapt" ], function(Adapt) {
       return false;
     },
 
-    setChildrenVisibility: function(isVisible) {
-      this.model.getChildren().each(function(child) {
-        child.setOnChildren("_isVisible", isVisible, { pluginName: "_drop" });
-      });
+    setAvailability: function(isAvailable) {
+      this.model.set("_isAvailable", isAvailable);
     },
 
     toggle: function() {
@@ -60,7 +58,7 @@ define([ "core/js/adapt" ], function(Adapt) {
     onOpen: function() {
       $(window).trigger("resize");
       Adapt.trigger("device:resize");
-      this.setChildrenVisibility(true);
+      this.setAvailability(true);
     },
 
     onOpened: function() {
@@ -70,7 +68,7 @@ define([ "core/js/adapt" ], function(Adapt) {
     onClose: function() {},
 
     onClosed: function() {
-      this.setChildrenVisibility(false);
+      this.setAvailability(false);
     }
 
   });
