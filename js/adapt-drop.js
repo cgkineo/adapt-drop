@@ -5,7 +5,7 @@ define([ "core/js/adapt" ], function(Adapt) {
     $content: null,
 
     className: function() {
-      var classes = "drop";
+      var classes = "drop is-closed";
       var modelClasses = this.model.get("_drop")._classes;
 
       if (modelClasses) classes += " " + modelClasses;
@@ -47,7 +47,8 @@ define([ "core/js/adapt" ], function(Adapt) {
     toggle: function() {
       var shouldOpen = !this.$el.hasClass("is-open");
 
-      this.$el.toggleClass("is-open", shouldOpen);
+      this.$el.toggleClass("is-open", shouldOpen)
+              .toggleClass("is-closed", !shouldOpen);
       this.$(".drop__btn").first().attr("aria-expanded", shouldOpen);
 
       this.$content.stop().slideToggle({
