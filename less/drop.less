@@ -6,16 +6,13 @@
   // --------------------------------------------------
   // Btn icon states
   // --------------------------------------------------
-  &__btn-icon {
-    .is-closed & .icon {
-      .icon-plus;
-    }
+  &.is-open .drop__btn-icon .icon {
+    .icon-minus;
   }
 
-  &__btn-icon {
-    .is-open & .icon {
-      .icon-minus;
-    }
+  &.is-closed .drop__btn-icon .icon {
+    .icon-plus;
   }
+
   // --------------------------------------------------
 }
