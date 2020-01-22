@@ -1,7 +1,7 @@
 {
   "name": "adapt-drop",
   "version": "1.0.0",
-  "framework": ">=2",
+  "framework": ">=5",
   "displayName": "Drop",
   "extension": "drop",
   "targetAttribute": "_drop",
