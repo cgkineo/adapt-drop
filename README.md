@@ -4,7 +4,7 @@ A dropdown extension to expand and shrink elements.
 
 ## Installation
 
-* Add the [example JSON](example.json) to elements you wish to shrink.
+* Add the [example JSON](example.json) to elements you wish to shrink. Drop can be used on any element: course, content object, article, block or component.
 * Copy the extension folder into the src > extensions directory and run an appropriate Grunt task.
 
 ## Usage
