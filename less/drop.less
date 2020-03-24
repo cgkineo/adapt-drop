@@ -1,9 +1,15 @@
 .drop {
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__btn.is-full-width {
     width: 100%;
   }
 
-  // --------------------------------------------------
   // Btn icon states
   // --------------------------------------------------
   &.is-open .drop__btn-icon .icon {
@@ -15,4 +21,33 @@
   }
 
   // --------------------------------------------------
+}
+
+// --------------------------------------------------
+// --------------------------------------------------
+// THEME
+// --------------------------------------------------
+// --------------------------------------------------
+.drop {
+  &__btn {
+    padding: @btn-padding;
+    background-color: @btn-color;
+    color: @btn-color-inverted;
+    border-radius: @btn-border-radius;
+
+    .no-touch &:hover {
+      background-color: @btn-color-hover;
+      color: @btn-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__btn.is-visited {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+
+  &__btn-title {
+    margin-left: @btn-margin / 2;
+  }
 }
