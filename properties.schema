@@ -25,20 +25,22 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container"
+                  "help": "Custom classes to add to the container element and selectable button"
                 },
                 "title": {
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
@@ -63,20 +65,22 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container"
+                  "help": "Custom classes to add to the container element and selectable button"
                 },
                 "title": {
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
@@ -101,20 +105,22 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container"
+                  "help": "Custom classes to add to the container element and selectable button"
                 },
                 "title": {
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
@@ -139,20 +145,22 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container"
+                  "help": "Custom classes to add to the container element and selectable button"
                 },
                 "title": {
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
@@ -177,20 +185,22 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container"
+                  "help": "Custom classes to add to the container element and selectable button"
                 },
                 "title": {
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
