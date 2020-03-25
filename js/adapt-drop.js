@@ -42,7 +42,9 @@ define([
 
     setChildrenVisibility: function(isVisible) {
       this.model.getChildren().each(function(child) {
-        child.setOnChildren("_isVisible", isVisible, { pluginName: "_drop" });
+        if (child.setOnChildren) {
+          child.setOnChildren('_isVisible', isVisible, { pluginName: '_drop' });
+        }
       });
     },
 
