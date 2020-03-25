@@ -11,11 +11,11 @@
 
   // Btn icon states
   // --------------------------------------------------
-  &.is-open .drop__btn-icon .icon {
+  &.is-open > .drop__btn .icon {
     .icon-minus;
   }
 
-  &.is-closed .drop__btn-icon .icon {
+  &.is-closed > .drop__btn .icon {
     .icon-plus;
   }
 
@@ -28,8 +28,10 @@
 // --------------------------------------------------
 // --------------------------------------------------
 .drop {
+  margin: @item-margin auto;
+
   &__btn {
-    margin: @item-margin auto;
+    margin: 0 auto;
     padding: @btn-padding;
     background-color: @btn-color;
     color: @btn-color-inverted;
