@@ -5,17 +5,17 @@
     align-items: center;
   }
 
-  &__btn.is-full-width {
+  &.is-full-width > &__btn {
     width: 100%;
   }
 
   // Btn icon states
   // --------------------------------------------------
-  &.is-open > .drop__btn .icon {
+  &.is-open > &__btn .icon {
     .icon-minus;
   }
 
-  &.is-closed > .drop__btn .icon {
+  &.is-closed > &__btn .icon {
     .icon-plus;
   }
 

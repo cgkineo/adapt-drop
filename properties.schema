@@ -25,7 +25,7 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container element and selectable button"
+                  "help": "Custom classes to add to the container"
                 },
                 "title": {
                   "type": "string",
@@ -65,7 +65,7 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container element and selectable button"
+                  "help": "Custom classes to add to the container"
                 },
                 "title": {
                   "type": "string",
@@ -105,7 +105,7 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container element and selectable button"
+                  "help": "Custom classes to add to the container"
                 },
                 "title": {
                   "type": "string",
@@ -145,7 +145,7 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container element and selectable button"
+                  "help": "Custom classes to add to the container"
                 },
                 "title": {
                   "type": "string",
@@ -185,7 +185,7 @@
                   "default": "",
                   "title": "Classes",
                   "inputType": "Text",
-                  "help": "Custom classes to add to the container element and selectable button"
+                  "help": "Custom classes to add to the container"
                 },
                 "title": {
                   "type": "string",
