@@ -45,3 +45,11 @@ A dropdown extension to expand and shrink elements.
     <td><code>""</code></td>
   </tr>
 </table>
+
+----------------------------
+**Version number:** 1.0.0  
+**Framework versions:** 5.3+  
+**Author / maintainer:** Tom Greenfield / CGKineo  
+**Accessibility support:** WAI AA  
+**RTL support:** Yes  
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera  
