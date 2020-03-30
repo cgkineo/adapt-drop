@@ -31,14 +31,16 @@
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
@@ -69,14 +71,16 @@
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
@@ -107,14 +111,16 @@
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
@@ -145,14 +151,16 @@
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }
@@ -183,14 +191,16 @@
                   "type": "string",
                   "default": "",
                   "inputType": "Text",
-                  "help": "Button text"
+                  "help": "Button text",
+                  "translatable": true
                 },
                 "ariaLabel": {
                   "type": "string",
                   "default": "",
                   "title": "ARIA label",
                   "inputType": "Text",
-                  "help": "Button label for assistive technologies"
+                  "help": "Button label for assistive technologies",
+                  "translatable": true
                 }
               }
             }

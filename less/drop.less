@@ -1,50 +1,55 @@
-@non-mobile: ~"html:not(.os-ios):not(.os-android)";
-
 .drop {
-	margin-bottom: @item-margin-bottom;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.is-full-width > &__btn {
+    width: 100%;
+  }
+
+  // Btn icon states
+  // --------------------------------------------------
+  &.is-open > &__btn .icon {
+    .icon-minus;
+  }
+
+  &.is-closed > &__btn .icon {
+    .icon-plus;
+  }
+
+  // --------------------------------------------------
 }
 
-.drop-button {
-	position: relative;
-	width: 100%;
-	padding: @item-padding;
-	background-color: @item-color;
-	color: @item-text-color;
-	@{non-mobile} &:hover {
-		background-color: @item-color-hover;
-		color: @item-text-color-hover;
-	}
-	.visited > & {
-		background-color: @item-color-visited;
-		color: @item-text-color-visited;
-	}
-	.icon {
-		position: absolute;
-		top: 50%;
-		color: @item-text-color;
-		transform: translateY(-50%);
-	}
-	.dropped > & .icon-plus,
-	:not(.dropped) > & .icon-minus {
-		display: none;
-	}
-}
+// --------------------------------------------------
+// --------------------------------------------------
+// THEME
+// --------------------------------------------------
+// --------------------------------------------------
+.drop {
+  margin: @item-margin auto;
 
-.drop-title {
-	.item-title;
-}
+  &__btn {
+    margin: 0 auto;
+    padding: @btn-padding;
+    background-color: @btn-color;
+    color: @btn-color-inverted;
+    border-radius: @btn-border-radius;
 
-@media (min-width: (@device-width-medium + 1)) {
-	.component-left .drop {
-		margin-right: 5%;
-		.drop-content {
-			margin-right: 0;
-		}
-	}
-	.component-right .drop {
-		margin-left: 5%;
-		.drop-content {
-			margin-left: 0;
-		}
-	}
+    .no-touch &:hover {
+      background-color: @btn-color-hover;
+      color: @btn-color-inverted-hover;
+      .transition(background-color @duration ease-in, color @duration ease-in;);
+    }
+  }
+
+  &__btn.is-visited {
+    background-color: @visited;
+    color: @visited-inverted;
+  }
+
+  &__btn-title {
+    margin-left: @btn-margin / 2;
+  }
 }

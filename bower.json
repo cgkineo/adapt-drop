@@ -1,16 +1,17 @@
 {
-	"name": "adapt-drop",
-	"version": "0.1.1",
-	"framework": ">=2",
-	"displayName": "Drop",
-	"extension": "drop",
-	"targetAttribute": "_drop",
-	"description": "A dropdown extension to expand and shrink elements",
-	"main": "/js/adapt-drop.js",
-	"keywords": [
-		"adapt-plugin",
-		"adapt-extension"
-	],
-	"license": "GPL-3.0",
-	"homepage": "https://github.com/tomgreenfield/adapt-drop"
+  "name": "adapt-drop",
+  "version": "1.0.0",
+  "framework": ">=5.3",
+  "homepage": "https://github.com/cgkineo/adapt-drop",
+  "issues": "https://github.com/cgkineo/adapt-drop/issues/",
+  "extension": "drop",
+  "displayName": "Drop",
+  "description": "A dropdown extension to expand and shrink elements",
+  "main": "/js/adapt-drop.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "targetAttribute": "_drop"
 }
