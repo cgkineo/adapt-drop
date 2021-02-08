@@ -66,7 +66,7 @@ define([ 'core/js/adapt' ], function(Adapt) {
     }
 
     onOpened() {
-      Adapt.a11y.focus(this.$content);
+      Adapt.a11y.focusFirst(this.$content);
     }
 
     onClose() {}
