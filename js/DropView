@@ -53,7 +53,9 @@ export default class DropView extends Backbone.View {
       .addClass('is-visited')
       .attr('aria-expanded', shouldOpen);
 
-    this.$content.stop().slideToggle({
+    this.$content
+      .stop()
+      .slideToggle({
       start: (shouldOpen ? this.onOpen : this.onClose).bind(this),
       done: (shouldOpen ? this.onOpened : this.onClosed).bind(this)
     });
