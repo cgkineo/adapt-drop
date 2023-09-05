@@ -39,9 +39,8 @@ export default class DropView extends Backbone.View {
 
   setChildrenVisibility(isVisible) {
     this.model.getChildren().each(child => {
-      if (child.setOnChildren) {
-        child.setOnChildren('_isVisible', isVisible, { pluginName: '_drop' });
-      }
+      if (!child.setOnChildren) return;
+      child.setOnChildren('_isVisible', isVisible, { pluginName: '_drop' });
     });
   }
 
