@@ -25,8 +25,13 @@ export default class DropView extends Backbone.View {
     const template = Handlebars.templates.drop;
     const data = this.model.get('_drop');
 
-    this.$el.html(template(data)).appendTo(this.$content.parent());
-    this.$content.addClass('drop__content').appendTo(this.$el).hide();
+    this.$el
+      .html(template(data))
+      .appendTo(this.$content.parent());
+    this.$content
+      .addClass('drop__content')
+      .appendTo(this.$el)
+      .hide();
     this.setChildrenVisibility(false);
   }
 
