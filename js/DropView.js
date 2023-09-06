@@ -14,7 +14,9 @@ export default class DropView extends Backbone.View {
 
   initialize({ $content }) {
     this.$content = $content;
-    this.listenTo(Adapt, 'remove', this.remove).render();
+    this
+      .listenTo(Adapt, 'remove', this.remove)
+      .render();
   }
 
   events() {
@@ -61,9 +63,9 @@ export default class DropView extends Backbone.View {
     this.$content
       .stop()
       .slideToggle({
-      start: (shouldOpen ? this.onOpen : this.onClose).bind(this),
-      done: (shouldOpen ? this.onOpened : this.onClosed).bind(this)
-    });
+        start: (shouldOpen ? this.onOpen : this.onClose).bind(this),
+        done: (shouldOpen ? this.onOpened : this.onClosed).bind(this)
+      });
   }
 
   onOpen() {

@@ -1,15 +1,24 @@
 import DropView from './DropView';
 import Adapt from 'core/js/adapt';
 
-Adapt.once('app:dataReady', () => {
-  const views = [ 'menu', 'menuItem', 'page', 'article', 'block', 'component' ];
-  const eventList = views.map(view => `${view}View:postRender`).join(' ');
+class AdaptDrop extends Backbone.Controller {
 
-  Adapt.on(eventList, ({ model, $el }) => {
+  initialize() {
+    this.listenTo(Adapt, 'app:dataReady', this.onDataReady);
+  }
+
+  onDataReady() {
+    const views = [ 'menu', 'menuItem', 'page', 'article', 'block', 'component' ];
+    const eventList = views.map(view => `${view}View:postRender`).join(' ');
+    this.listenTo(Adapt, eventList, this.onEvent);
+  }
+
+  onEvent({ model, $el }) {
     const config = model.get('_drop');
+    if (!config?._isEnabled) return;
+    new DropView({ model, $content: $el.children().first() });
+  }
 
-    if (config && config._isEnabled) {
-      new DropView({ model, $content: $el.children().first() });
-    }
-  });
-});
+}
+
+export default new AdaptDrop();
