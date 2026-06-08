@@ -49,7 +49,7 @@ A dropdown extension to expand and shrink elements.
 ---
 
 **Framework versions:** 5.20+<br>
-**Author / maintainer:** CGKineo<br>
+**Author / maintainer:** Mindtools Kineo<br>
 **Accessibility support:** WAI AA<br>
 **RTL support:** Yes<br>
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, Safari 12+13 for macOS/iOS/iPadOS, Opera<br>
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, Safari for macOS/iOS/iPadOS, Opera<br>
