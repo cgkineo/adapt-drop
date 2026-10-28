@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { templates } from 'core/js/reactHelpers';
 
-export default class DropView extends Backbone.View {
+class DropView extends Backbone.View {
 
   className() {
     let classes = 'drop is-closed';
@@ -25,10 +25,6 @@ export default class DropView extends Backbone.View {
     this
       .listenTo(Adapt, 'remove', this.remove)
       .render();
-  }
-
-  static get template() {
-    return 'drop.jsx';
   }
 
   render() {
@@ -110,3 +106,7 @@ export default class DropView extends Backbone.View {
   }
 
 }
+
+DropView.template = 'drop.jsx';
+
+export default DropView;
