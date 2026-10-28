@@ -1,5 +1,9 @@
 import Adapt from 'core/js/adapt';
 import a11y from 'core/js/a11y';
+import wait from 'core/js/wait';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { templates } from 'core/js/reactHelpers';
 
 export default class DropView extends Backbone.View {
 
@@ -13,23 +17,23 @@ export default class DropView extends Backbone.View {
   }
 
   initialize({ $content }) {
+    _.bindAll(this, 'onClick');
     this.$content = $content;
+    // Kept on the view, not the model: a model change re-renders a JSX element whose content this view has moved
+    this.isOpen = false;
+    this.isVisited = false;
     this
       .listenTo(Adapt, 'remove', this.remove)
       .render();
   }
 
-  events() {
-    return { 'click .js-toggle-view': 'onClick' };
+  static get template() {
+    return 'drop.jsx';
   }
 
   render() {
-    const template = Handlebars.templates.drop;
-    const data = this.model.get('_drop');
-
-    this.$el
-      .html(template(data))
-      .appendTo(this.$content.parent());
+    this.renderButton();
+    this.$el.appendTo(this.$content.parent());
     this.$content
       .addClass('drop__content')
       .appendTo(this.$el)
@@ -37,11 +41,22 @@ export default class DropView extends Backbone.View {
     this.setChildrenVisibility(false);
   }
 
-  onClick() {
+  renderButton() {
+    const Template = templates[this.constructor.template.replace('.jsx', '')];
+    const props = {
+      ...this.model.get('_drop'),
+      _isOpen: this.isOpen,
+      _isVisited: this.isVisited,
+      onClick: this.onClick
+    };
+    ReactDOM.render(<Template {...props} />, this.el);
+  }
+
+  onClick(event) {
+    event.preventDefault();
+    event.stopPropagation();
     this.$el.addClass('is-visited');
     this.toggle();
-
-    return false;
   }
 
   setChildrenVisibility(isVisible) {
@@ -56,9 +71,9 @@ export default class DropView extends Backbone.View {
 
     this.$el.toggleClass('is-open is-closed');
 
-    this.$('.drop__btn').first()
-      .addClass('is-visited')
-      .attr('aria-expanded', shouldOpen);
+    this.isOpen = shouldOpen;
+    this.isVisited = true;
+    this.renderButton();
 
     this.$content
       .stop()
@@ -82,6 +97,16 @@ export default class DropView extends Backbone.View {
 
   onClosed() {
     this.setChildrenVisibility(false);
+  }
+
+  remove() {
+    this.stopListening();
+    wait.for(end => {
+      ReactDOM.unmountComponentAtNode(this.el);
+      super.remove();
+      end();
+    });
+    return this;
   }
 
 }
